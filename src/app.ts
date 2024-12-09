@@ -11,8 +11,9 @@ app.use('/api/cars', CarRoutes);
 app.use('/api/orders', OrderRoutes);
 
 const getAcontroller = (req: Request, res: Response) => {
-  const a = 10;
-  res.send(a);
+  res.status(200).json({
+    message: 'Welcome to car api',
+  });
 };
 
 app.get('/', getAcontroller);
