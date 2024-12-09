@@ -12,6 +12,7 @@ const createOrder = async (req: Request, res: Response) => {
       status: true,
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     res.status(400).json({
       message: 'Order creation failed',
@@ -30,6 +31,7 @@ const getAllOrders = async (req: Request, res: Response) => {
       status: true,
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     res.status(400).json({
       message: 'Failed to retrieve orders',
@@ -50,6 +52,7 @@ const calculateRevenue = async (req: Request, res: Response) => {
         totalRevenue,
       },
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     res.status(400).json({
       message: 'Failed to calculate revenue',

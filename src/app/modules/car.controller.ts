@@ -12,6 +12,7 @@ const createCar = async (req: Request, res: Response) => {
       success: true,
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       message: 'Validation failed',
@@ -29,6 +30,7 @@ const getAllCarsfromdb = async (req: Request, res: Response) => {
       message: 'Car is Retrive successfully',
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -47,6 +49,7 @@ const getSingleCar = async (req: Request, res: Response) => {
       message: 'Single Car is Retrive successfully',
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -64,6 +67,7 @@ const deleteCar = async (req: Request, res: Response) => {
       message: 'Car deleted successfully',
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -84,6 +88,7 @@ const updateCar = async (req: Request, res: Response) => {
       message: 'Car updated successfully',
       data: result,
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
